@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABDB4627180359E30071E14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4626180359E30071E14F /* Foundation.framework */; };
+		ABDB4629180359E30071E14F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4628180359E30071E14F /* CoreGraphics.framework */; };
+		ABDB462B180359E30071E14F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462A180359E30071E14F /* UIKit.framework */; };
+		ABDB462D180359E30071E14F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462C180359E30071E14F /* CoreData.framework */; };
+		ABDB4633180359E30071E14F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABDB4631180359E30071E14F /* InfoPlist.strings */; };
+		ABDB4635180359E30071E14F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB4634180359E30071E14F /* main.m */; };
+		ABDB4639180359E30071E14F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB4638180359E30071E14F /* AppDelegate.m */; };
+		ABDB463E180359E30071E14F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABDB463D180359E30071E14F /* Images.xcassets */; };
+		ABDB4645180359E40071E14F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4644180359E40071E14F /* XCTest.framework */; };
+		ABDB4646180359E40071E14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4626180359E30071E14F /* Foundation.framework */; };
+		ABDB4647180359E40071E14F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462A180359E30071E14F /* UIKit.framework */; };
+		ABDB4648180359E40071E14F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462C180359E30071E14F /* CoreData.framework */; };
+		ABDB4650180359E40071E14F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABDB464E180359E40071E14F /* InfoPlist.strings */; };
+		ABDB4652180359E40071E14F /* PKWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB4651180359E40071E14F /* PKWorldTests.m */; };
+		ABDB468618035A370071E14F /* UIView-Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB465E18035A370071E14F /* UIView-Transform.m */; };
+		ABDB468718035A370071E14F /* UIView-Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB465E18035A370071E14F /* UIView-Transform.m */; };
+		ABDB468818035A370071E14F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466218035A370071E14F /* BaseViewController.m */; };
+		ABDB468918035A370071E14F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466218035A370071E14F /* BaseViewController.m */; };
+		ABDB468A18035A370071E14F /* HealthHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthHomeViewController.m */; };
+		ABDB468B18035A370071E14F /* HealthHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthHomeViewController.m */; };
+		ABDB468C18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */; };
+		ABDB468D18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */; };
+		ABDB468E18035A370071E14F /* LeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */; };
+		ABDB468F18035A370071E14F /* LeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */; };
+		ABDB469018035A370071E14F /* MainCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466E18035A370071E14F /* MainCenterViewController.m */; };
+		ABDB469118035A370071E14F /* MainCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466E18035A370071E14F /* MainCenterViewController.m */; };
+		ABDB469218035A370071E14F /* NewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsHomeViewController.m */; };
+		ABDB469318035A370071E14F /* NewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsHomeViewController.m */; };
+		ABDB469418035A370071E14F /* PhotosHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosHomeViewController.m */; };
+		ABDB469518035A370071E14F /* PhotosHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosHomeViewController.m */; };
+		ABDB469618035A370071E14F /* PKWorldHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldHomeViewController.m */; };
+		ABDB469718035A370071E14F /* PKWorldHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldHomeViewController.m */; };
+		ABDB469818035A370071E14F /* SecretHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretHomeViewController.m */; };
+		ABDB469918035A370071E14F /* SecretHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretHomeViewController.m */; };
+		ABDB469A18035A370071E14F /* TakeAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467D18035A370071E14F /* TakeAudioViewController.m */; };
+		ABDB469B18035A370071E14F /* TakeAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467D18035A370071E14F /* TakeAudioViewController.m */; };
+		ABDB469C18035A370071E14F /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467F18035A370071E14F /* TakePhotoViewController.m */; };
+		ABDB469D18035A370071E14F /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467F18035A370071E14F /* TakePhotoViewController.m */; };
+		ABDB469E18035A370071E14F /* TakeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB468118035A370071E14F /* TakeVideoViewController.m */; };
+		ABDB469F18035A370071E14F /* TakeVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB468118035A370071E14F /* TakeVideoViewController.m */; };
+		ABDB46A018035A370071E14F /* PKWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABDB468318035A370071E14F /* PKWorld.xcdatamodeld */; };
+		ABDB46A118035A370071E14F /* PKWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABDB468318035A370071E14F /* PKWorld.xcdatamodeld */; };
+		ABDB46A518035A560071E14F /* galaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDB46A418035A560071E14F /* galaxy.png */; };
+		ABDB46A618035A560071E14F /* galaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDB46A418035A560071E14F /* galaxy.png */; };
+		ABDB46B118035AA40071E14F /* XHDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB46B018035AA40071E14F /* XHDrawerController.m */; };
+		ABDB46B218035AA40071E14F /* XHDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB46B018035AA40071E14F /* XHDrawerController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABDB4649180359E40071E14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABDB461B180359E30071E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABDB4622180359E30071E14F;
+			remoteInfo = PKWorld;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABDB4623180359E30071E14F /* PKWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDB4626180359E30071E14F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABDB4628180359E30071E14F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		ABDB462A180359E30071E14F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		ABDB462C180359E30071E14F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ABDB4630180359E30071E14F /* PKWorld-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PKWorld-Info.plist"; sourceTree = "<group>"; };
+		ABDB4632180359E30071E14F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABDB4634180359E30071E14F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ABDB4636180359E30071E14F /* PKWorld-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PKWorld-Prefix.pch"; sourceTree = "<group>"; };
+		ABDB4637180359E30071E14F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ABDB4638180359E30071E14F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ABDB463D180359E30071E14F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABDB4643180359E40071E14F /* PKWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PKWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDB4644180359E40071E14F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ABDB464D180359E40071E14F /* PKWorldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PKWorldTests-Info.plist"; sourceTree = "<group>"; };
+		ABDB464F180359E40071E14F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ABDB4651180359E40071E14F /* PKWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKWorldTests.m; sourceTree = "<group>"; };
+		ABDB465D18035A370071E14F /* UIView-Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView-Transform.h"; sourceTree = "<group>"; };
+		ABDB465E18035A370071E14F /* UIView-Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView-Transform.m"; sourceTree = "<group>"; };
+		ABDB466118035A370071E14F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		ABDB466218035A370071E14F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		ABDB466418035A370071E14F /* HealthHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthHomeViewController.h; sourceTree = "<group>"; };
+		ABDB466518035A370071E14F /* HealthHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthHomeViewController.m; sourceTree = "<group>"; };
+		ABDB466718035A370071E14F /* TheConnotationOfJokesHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheConnotationOfJokesHomeViewController.h; sourceTree = "<group>"; };
+		ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheConnotationOfJokesHomeViewController.m; sourceTree = "<group>"; };
+		ABDB466A18035A370071E14F /* LeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideDrawerViewController.h; sourceTree = "<group>"; };
+		ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideDrawerViewController.m; sourceTree = "<group>"; };
+		ABDB466D18035A370071E14F /* MainCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCenterViewController.h; sourceTree = "<group>"; };
+		ABDB466E18035A370071E14F /* MainCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCenterViewController.m; sourceTree = "<group>"; };
+		ABDB467018035A370071E14F /* NewsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsHomeViewController.h; sourceTree = "<group>"; };
+		ABDB467118035A370071E14F /* NewsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsHomeViewController.m; sourceTree = "<group>"; };
+		ABDB467318035A370071E14F /* PhotosHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosHomeViewController.h; sourceTree = "<group>"; };
+		ABDB467418035A370071E14F /* PhotosHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosHomeViewController.m; sourceTree = "<group>"; };
+		ABDB467618035A370071E14F /* PKWorldHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWorldHomeViewController.h; sourceTree = "<group>"; };
+		ABDB467718035A370071E14F /* PKWorldHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWorldHomeViewController.m; sourceTree = "<group>"; };
+		ABDB467918035A370071E14F /* SecretHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretHomeViewController.h; sourceTree = "<group>"; };
+		ABDB467A18035A370071E14F /* SecretHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretHomeViewController.m; sourceTree = "<group>"; };
+		ABDB467C18035A370071E14F /* TakeAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeAudioViewController.h; sourceTree = "<group>"; };
+		ABDB467D18035A370071E14F /* TakeAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeAudioViewController.m; sourceTree = "<group>"; };
+		ABDB467E18035A370071E14F /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
+		ABDB467F18035A370071E14F /* TakePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoViewController.m; sourceTree = "<group>"; };
+		ABDB468018035A370071E14F /* TakeVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeVideoViewController.h; sourceTree = "<group>"; };
+		ABDB468118035A370071E14F /* TakeVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeVideoViewController.m; sourceTree = "<group>"; };
+		ABDB468418035A370071E14F /* PKWorld.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PKWorld.xcdatamodel; sourceTree = "<group>"; };
+		ABDB46A418035A560071E14F /* galaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galaxy.png; sourceTree = "<group>"; };
+		ABDB46AF18035AA40071E14F /* XHDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHDrawerController.h; sourceTree = "<group>"; };
+		ABDB46B018035AA40071E14F /* XHDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDrawerController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABDB4620180359E30071E14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB4629180359E30071E14F /* CoreGraphics.framework in Frameworks */,
+				ABDB462D180359E30071E14F /* CoreData.framework in Frameworks */,
+				ABDB462B180359E30071E14F /* UIKit.framework in Frameworks */,
+				ABDB4627180359E30071E14F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABDB4640180359E40071E14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB4645180359E40071E14F /* XCTest.framework in Frameworks */,
+				ABDB4648180359E40071E14F /* CoreData.framework in Frameworks */,
+				ABDB4647180359E40071E14F /* UIKit.framework in Frameworks */,
+				ABDB4646180359E40071E14F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABDB461A180359E30071E14F = {
+			isa = PBXGroup;
+			children = (
+				ABDB462E180359E30071E14F /* PKWorld */,
+				ABDB464B180359E40071E14F /* PKWorldTests */,
+				ABDB4625180359E30071E14F /* Frameworks */,
+				ABDB4624180359E30071E14F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABDB4624180359E30071E14F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB4623180359E30071E14F /* PKWorld.app */,
+				ABDB4643180359E40071E14F /* PKWorldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABDB4625180359E30071E14F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB4626180359E30071E14F /* Foundation.framework */,
+				ABDB4628180359E30071E14F /* CoreGraphics.framework */,
+				ABDB462A180359E30071E14F /* UIKit.framework */,
+				ABDB462C180359E30071E14F /* CoreData.framework */,
+				ABDB4644180359E40071E14F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABDB462E180359E30071E14F /* PKWorld */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB4637180359E30071E14F /* AppDelegate.h */,
+				ABDB4638180359E30071E14F /* AppDelegate.m */,
+				ABDB465B18035A370071E14F /* Categorys */,
+				ABDB46AD18035AA40071E14F /* Vendor */,
+				ABDB468218035A370071E14F /* Models */,
+				ABDB465F18035A370071E14F /* Controllers */,
+				ABDB468518035A370071E14F /* Views */,
+				ABDB463D180359E30071E14F /* Images.xcassets */,
+				ABDB462F180359E30071E14F /* Supporting Files */,
+			);
+			path = PKWorld;
+			sourceTree = "<group>";
+		};
+		ABDB462F180359E30071E14F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB46A218035A560071E14F /* Resources */,
+				ABDB4630180359E30071E14F /* PKWorld-Info.plist */,
+				ABDB4631180359E30071E14F /* InfoPlist.strings */,
+				ABDB4634180359E30071E14F /* main.m */,
+				ABDB4636180359E30071E14F /* PKWorld-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABDB464B180359E40071E14F /* PKWorldTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB4651180359E40071E14F /* PKWorldTests.m */,
+				ABDB464C180359E40071E14F /* Supporting Files */,
+			);
+			path = PKWorldTests;
+			sourceTree = "<group>";
+		};
+		ABDB464C180359E40071E14F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB464D180359E40071E14F /* PKWorldTests-Info.plist */,
+				ABDB464E180359E40071E14F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABDB465B18035A370071E14F /* Categorys */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB465C18035A370071E14F /* UIViewCategory */,
+			);
+			path = Categorys;
+			sourceTree = "<group>";
+		};
+		ABDB465C18035A370071E14F /* UIViewCategory */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB465D18035A370071E14F /* UIView-Transform.h */,
+				ABDB465E18035A370071E14F /* UIView-Transform.m */,
+			);
+			path = UIViewCategory;
+			sourceTree = "<group>";
+		};
+		ABDB465F18035A370071E14F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466018035A370071E14F /* BaseViewController */,
+				ABDB466318035A370071E14F /* Health */,
+				ABDB466618035A370071E14F /* Jokes */,
+				ABDB466918035A370071E14F /* Left */,
+				ABDB466C18035A370071E14F /* MainCenter */,
+				ABDB466F18035A370071E14F /* News */,
+				ABDB467218035A370071E14F /* Photos */,
+				ABDB467518035A370071E14F /* PKWorld */,
+				ABDB467818035A370071E14F /* Secrets */,
+				ABDB467B18035A370071E14F /* TakeUserVisible */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABDB466018035A370071E14F /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466118035A370071E14F /* BaseViewController.h */,
+				ABDB466218035A370071E14F /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		ABDB466318035A370071E14F /* Health */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466418035A370071E14F /* HealthHomeViewController.h */,
+				ABDB466518035A370071E14F /* HealthHomeViewController.m */,
+			);
+			path = Health;
+			sourceTree = "<group>";
+		};
+		ABDB466618035A370071E14F /* Jokes */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466718035A370071E14F /* TheConnotationOfJokesHomeViewController.h */,
+				ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */,
+			);
+			path = Jokes;
+			sourceTree = "<group>";
+		};
+		ABDB466918035A370071E14F /* Left */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466A18035A370071E14F /* LeftSideDrawerViewController.h */,
+				ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */,
+			);
+			path = Left;
+			sourceTree = "<group>";
+		};
+		ABDB466C18035A370071E14F /* MainCenter */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB466D18035A370071E14F /* MainCenterViewController.h */,
+				ABDB466E18035A370071E14F /* MainCenterViewController.m */,
+			);
+			path = MainCenter;
+			sourceTree = "<group>";
+		};
+		ABDB466F18035A370071E14F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB467018035A370071E14F /* NewsHomeViewController.h */,
+				ABDB467118035A370071E14F /* NewsHomeViewController.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		ABDB467218035A370071E14F /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB467318035A370071E14F /* PhotosHomeViewController.h */,
+				ABDB467418035A370071E14F /* PhotosHomeViewController.m */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		ABDB467518035A370071E14F /* PKWorld */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB467618035A370071E14F /* PKWorldHomeViewController.h */,
+				ABDB467718035A370071E14F /* PKWorldHomeViewController.m */,
+			);
+			path = PKWorld;
+			sourceTree = "<group>";
+		};
+		ABDB467818035A370071E14F /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB467918035A370071E14F /* SecretHomeViewController.h */,
+				ABDB467A18035A370071E14F /* SecretHomeViewController.m */,
+			);
+			path = Secrets;
+			sourceTree = "<group>";
+		};
+		ABDB467B18035A370071E14F /* TakeUserVisible */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB467C18035A370071E14F /* TakeAudioViewController.h */,
+				ABDB467D18035A370071E14F /* TakeAudioViewController.m */,
+				ABDB467E18035A370071E14F /* TakePhotoViewController.h */,
+				ABDB467F18035A370071E14F /* TakePhotoViewController.m */,
+				ABDB468018035A370071E14F /* TakeVideoViewController.h */,
+				ABDB468118035A370071E14F /* TakeVideoViewController.m */,
+			);
+			path = TakeUserVisible;
+			sourceTree = "<group>";
+		};
+		ABDB468218035A370071E14F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB468318035A370071E14F /* PKWorld.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABDB468518035A370071E14F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ABDB46A218035A560071E14F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB46A318035A560071E14F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ABDB46A318035A560071E14F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB46A418035A560071E14F /* galaxy.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		ABDB46AD18035AA40071E14F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB46AE18035AA40071E14F /* XHDrawerController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		ABDB46AE18035AA40071E14F /* XHDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				ABDB46AF18035AA40071E14F /* XHDrawerController.h */,
+				ABDB46B018035AA40071E14F /* XHDrawerController.m */,
+			);
+			path = XHDrawerController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABDB4622180359E30071E14F /* PKWorld */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABDB4655180359E40071E14F /* Build configuration list for PBXNativeTarget "PKWorld" */;
+			buildPhases = (
+				ABDB461F180359E30071E14F /* Sources */,
+				ABDB4620180359E30071E14F /* Frameworks */,
+				ABDB4621180359E30071E14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PKWorld;
+			productName = PKWorld;
+			productReference = ABDB4623180359E30071E14F /* PKWorld.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABDB4642180359E40071E14F /* PKWorldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABDB4658180359E40071E14F /* Build configuration list for PBXNativeTarget "PKWorldTests" */;
+			buildPhases = (
+				ABDB463F180359E40071E14F /* Sources */,
+				ABDB4640180359E40071E14F /* Frameworks */,
+				ABDB4641180359E40071E14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABDB464A180359E40071E14F /* PBXTargetDependency */,
+			);
+			name = PKWorldTests;
+			productName = PKWorldTests;
+			productReference = ABDB4643180359E40071E14F /* PKWorldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABDB461B180359E30071E14F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = Jack_team;
+				TargetAttributes = {
+					ABDB4642180359E40071E14F = {
+						TestTargetID = ABDB4622180359E30071E14F;
+					};
+				};
+			};
+			buildConfigurationList = ABDB461E180359E30071E14F /* Build configuration list for PBXProject "PKWorld" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABDB461A180359E30071E14F;
+			productRefGroup = ABDB4624180359E30071E14F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABDB4622180359E30071E14F /* PKWorld */,
+				ABDB4642180359E40071E14F /* PKWorldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABDB4621180359E30071E14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB4633180359E30071E14F /* InfoPlist.strings in Resources */,
+				ABDB46A518035A560071E14F /* galaxy.png in Resources */,
+				ABDB463E180359E30071E14F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABDB4641180359E40071E14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB4650180359E40071E14F /* InfoPlist.strings in Resources */,
+				ABDB46A618035A560071E14F /* galaxy.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABDB461F180359E30071E14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB46B118035AA40071E14F /* XHDrawerController.m in Sources */,
+				ABDB468C18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */,
+				ABDB468A18035A370071E14F /* HealthHomeViewController.m in Sources */,
+				ABDB469E18035A370071E14F /* TakeVideoViewController.m in Sources */,
+				ABDB469018035A370071E14F /* MainCenterViewController.m in Sources */,
+				ABDB469A18035A370071E14F /* TakeAudioViewController.m in Sources */,
+				ABDB469C18035A370071E14F /* TakePhotoViewController.m in Sources */,
+				ABDB469818035A370071E14F /* SecretHomeViewController.m in Sources */,
+				ABDB4639180359E30071E14F /* AppDelegate.m in Sources */,
+				ABDB468818035A370071E14F /* BaseViewController.m in Sources */,
+				ABDB4635180359E30071E14F /* main.m in Sources */,
+				ABDB469618035A370071E14F /* PKWorldHomeViewController.m in Sources */,
+				ABDB469418035A370071E14F /* PhotosHomeViewController.m in Sources */,
+				ABDB469218035A370071E14F /* NewsHomeViewController.m in Sources */,
+				ABDB468E18035A370071E14F /* LeftSideDrawerViewController.m in Sources */,
+				ABDB468618035A370071E14F /* UIView-Transform.m in Sources */,
+				ABDB46A018035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABDB463F180359E40071E14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABDB469318035A370071E14F /* NewsHomeViewController.m in Sources */,
+				ABDB469718035A370071E14F /* PKWorldHomeViewController.m in Sources */,
+				ABDB46A118035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
+				ABDB4652180359E40071E14F /* PKWorldTests.m in Sources */,
+				ABDB468D18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */,
+				ABDB469918035A370071E14F /* SecretHomeViewController.m in Sources */,
+				ABDB469D18035A370071E14F /* TakePhotoViewController.m in Sources */,
+				ABDB468918035A370071E14F /* BaseViewController.m in Sources */,
+				ABDB46B218035AA40071E14F /* XHDrawerController.m in Sources */,
+				ABDB469518035A370071E14F /* PhotosHomeViewController.m in Sources */,
+				ABDB468718035A370071E14F /* UIView-Transform.m in Sources */,
+				ABDB468B18035A370071E14F /* HealthHomeViewController.m in Sources */,
+				ABDB469118035A370071E14F /* MainCenterViewController.m in Sources */,
+				ABDB469F18035A370071E14F /* TakeVideoViewController.m in Sources */,
+				ABDB469B18035A370071E14F /* TakeAudioViewController.m in Sources */,
+				ABDB468F18035A370071E14F /* LeftSideDrawerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABDB464A180359E40071E14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABDB4622180359E30071E14F /* PKWorld */;
+			targetProxy = ABDB4649180359E40071E14F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABDB4631180359E30071E14F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDB4632180359E30071E14F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ABDB464E180359E40071E14F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABDB464F180359E40071E14F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABDB4653180359E40071E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ABDB4654180359E40071E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABDB4656180359E40071E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
+				INFOPLIST_FILE = "PKWorld/PKWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ABDB4657180359E40071E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
+				INFOPLIST_FILE = "PKWorld/PKWorld-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ABDB4659180359E40071E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PKWorld.app/PKWorld";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PKWorldTests/PKWorldTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ABDB465A180359E40071E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PKWorld.app/PKWorld";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
+				INFOPLIST_FILE = "PKWorldTests/PKWorldTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABDB461E180359E30071E14F /* Build configuration list for PBXProject "PKWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABDB4653180359E40071E14F /* Debug */,
+				ABDB4654180359E40071E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABDB4655180359E40071E14F /* Build configuration list for PBXNativeTarget "PKWorld" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABDB4656180359E40071E14F /* Debug */,
+				ABDB4657180359E40071E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABDB4658180359E40071E14F /* Build configuration list for PBXNativeTarget "PKWorldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABDB4659180359E40071E14F /* Debug */,
+				ABDB465A180359E40071E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ABDB468318035A370071E14F /* PKWorld.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ABDB468418035A370071E14F /* PKWorld.xcdatamodel */,
+			);
+			currentVersion = ABDB468418035A370071E14F /* PKWorld.xcdatamodel */;
+			path = PKWorld.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ABDB461B180359E30071E14F /* Project object */;
+}
