@@ -19,8 +19,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [self.view addSubview:tableView];
+    self.view.backgroundColor = [UIColor blackColor];
+    UIScrollView *mainScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    mainScrollView.pagingEnabled = YES;
+    for (int i = 0; i < 4; i ++) {
+        CGRect viewFrame = CGRectMake(i * CGRectGetWidth(self.view.frame), 0, 320, CGRectGetHeight(self.view.frame));
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:viewFrame];
+        imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Snip20130926_%d.png", i + 1]];
+        [mainScrollView addSubview:imageView];
+    }
+    [mainScrollView setContentSize:CGSizeMake(CGRectGetWidth(self.view.frame) * 4, 0)];
+    self.mainScrollView = mainScrollView;
+    [self.view addSubview:mainScrollView];
 }
 
 

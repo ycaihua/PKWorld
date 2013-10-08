@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1025DE180414AD00CEED90 /* Snip20130926_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DA180414AD00CEED90 /* Snip20130926_4.png */; };
+		AB1025DF180414AD00CEED90 /* Snip20130926_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DA180414AD00CEED90 /* Snip20130926_4.png */; };
+		AB1025E0180414AD00CEED90 /* Snip20130926_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DB180414AD00CEED90 /* Snip20130926_3.png */; };
+		AB1025E1180414AD00CEED90 /* Snip20130926_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DB180414AD00CEED90 /* Snip20130926_3.png */; };
+		AB1025E2180414AD00CEED90 /* Snip20130926_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DC180414AD00CEED90 /* Snip20130926_2.png */; };
+		AB1025E3180414AD00CEED90 /* Snip20130926_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DC180414AD00CEED90 /* Snip20130926_2.png */; };
+		AB1025E4180414AD00CEED90 /* Snip20130926_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DD180414AD00CEED90 /* Snip20130926_1.png */; };
+		AB1025E5180414AD00CEED90 /* Snip20130926_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DD180414AD00CEED90 /* Snip20130926_1.png */; };
 		ABDB4627180359E30071E14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4626180359E30071E14F /* Foundation.framework */; };
 		ABDB4629180359E30071E14F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4628180359E30071E14F /* CoreGraphics.framework */; };
 		ABDB462B180359E30071E14F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462A180359E30071E14F /* UIKit.framework */; };
@@ -66,6 +74,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB1025DA180414AD00CEED90 /* Snip20130926_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_4.png; sourceTree = "<group>"; };
+		AB1025DB180414AD00CEED90 /* Snip20130926_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_3.png; sourceTree = "<group>"; };
+		AB1025DC180414AD00CEED90 /* Snip20130926_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_2.png; sourceTree = "<group>"; };
+		AB1025DD180414AD00CEED90 /* Snip20130926_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_1.png; sourceTree = "<group>"; };
 		ABDB4623180359E30071E14F /* PKWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB4626180359E30071E14F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABDB4628180359E30071E14F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -372,6 +384,10 @@
 		ABDB46A318035A560071E14F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AB1025DA180414AD00CEED90 /* Snip20130926_4.png */,
+				AB1025DB180414AD00CEED90 /* Snip20130926_3.png */,
+				AB1025DC180414AD00CEED90 /* Snip20130926_2.png */,
+				AB1025DD180414AD00CEED90 /* Snip20130926_1.png */,
 				ABDB46A418035A560071E14F /* galaxy.png */,
 			);
 			path = Images;
@@ -470,6 +486,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDB4633180359E30071E14F /* InfoPlist.strings in Resources */,
+				AB1025E4180414AD00CEED90 /* Snip20130926_1.png in Resources */,
+				AB1025E0180414AD00CEED90 /* Snip20130926_3.png in Resources */,
+				AB1025DE180414AD00CEED90 /* Snip20130926_4.png in Resources */,
+				AB1025E2180414AD00CEED90 /* Snip20130926_2.png in Resources */,
 				ABDB46A518035A560071E14F /* galaxy.png in Resources */,
 				ABDB463E180359E30071E14F /* Images.xcassets in Resources */,
 			);
@@ -479,7 +499,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1025E1180414AD00CEED90 /* Snip20130926_3.png in Resources */,
+				AB1025E3180414AD00CEED90 /* Snip20130926_2.png in Resources */,
 				ABDB4650180359E40071E14F /* InfoPlist.strings in Resources */,
+				AB1025DF180414AD00CEED90 /* Snip20130926_4.png in Resources */,
+				AB1025E5180414AD00CEED90 /* Snip20130926_1.png in Resources */,
 				ABDB46A618035A560071E14F /* galaxy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +668,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xianhua zeng (URASQ4RCLH)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
 				INFOPLIST_FILE = "PKWorld/PKWorld-Info.plist";

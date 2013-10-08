@@ -22,14 +22,33 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     
     CGAffineTransform originScaleTransfrom;
     BOOL isIpad;
+    
+    // ScrollView 转换过来的手势
+    BOOL isPaning;
 }
 @property (nonatomic, assign, readwrite) XHDrawerSide openSide;
 @property (nonatomic, strong) UIView *closeOverlayView;
 @property (nonatomic, strong) UIView *containerView;
 @property (nonatomic, strong) UIView * childControllerContainerView;
+@property (nonatomic, strong) UIScrollView *mainScrollView;
 @end
 
 @implementation XHDrawerController
+@synthesize mainScrollView = _mainScrollView;
+
+#pragma mark - MainScrollView  setter getter
+
+- (void)setMainScrollView:(UIScrollView *)mainScrollView {
+    if (_mainScrollView == mainScrollView)
+        return ;
+    _mainScrollView = nil;
+    _mainScrollView = mainScrollView;
+    [_mainScrollView.panGestureRecognizer addTarget:self action:@selector(scrollViewPanGestureHandle:)];
+}
+
+- (UIScrollView *)mainScrollView {
+    return _mainScrollView;
+}
 
 - (UIView *)childControllerContainerView {
     if(_childControllerContainerView == nil){
@@ -247,6 +266,7 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     }
     
     _mainViewController = centerViewController;
+    [self stupCenterViewControllerObserver:centerViewController];
     
     [self addChildViewController:self.mainViewController];
     [self.mainViewController.view setFrame:self.containerView.bounds];
@@ -260,6 +280,22 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     }
 }
 
+- (void)stupCenterViewControllerObserver:(UIViewController *)mainViewController {
+    if ([mainViewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)mainViewController;
+        UIViewController *viewController = [navigationController.viewControllers firstObject];
+        UIScrollView *mainScrollView = [viewController valueForKey:@"mainScrollView"];
+        if (mainScrollView)
+            [self setMainScrollView:mainScrollView];
+        [viewController addObserver:self forKeyPath:@"mainScrollView" options:NSKeyValueObservingOptionNew context:NULL];
+    } else if ([mainViewController isKindOfClass:[UIViewController class]]) {
+        UIScrollView *mainScrollView = [mainViewController valueForKey:@"mainScrollView"];
+        if (mainScrollView)
+            [self setMainScrollView:mainScrollView];
+        [mainViewController addObserver:self forKeyPath:@"mainScrollView" options:NSKeyValueObservingOptionNew context:NULL];
+    }
+}
+
 #pragma mark - UIGesture
 
 - (void)tapGestureHandle:(UITapGestureRecognizer *)tapGesture {
@@ -268,10 +304,33 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     [self closeMenuAnimated:YES completion:NULL];
 }
 
+- (void)scrollViewPanGestureHandle:(UIPanGestureRecognizer *)panGesture {
+    if (self.mainScrollView.contentOffset.x < 0) {
+        isPaning = YES;
+    } else if (self.mainScrollView.contentOffset.x > (self.mainScrollView.contentSize.width - CGRectGetWidth(self.mainScrollView.frame))) {
+        // isPaning = YES;
+    }
+    if (isPaning) {
+        if (!self.open) {
+            self.mainScrollView.scrollEnabled = NO;
+            [self openMenuAnimated:YES completion:^(BOOL finished) {
+                isPaning = !finished;
+                self.mainScrollView.scrollEnabled = finished;
+            }];
+        }
+    }
+}
+
 - (void)panGestureHandle:(UIPanGestureRecognizer *)panGesture {
     UIGestureRecognizerState state = panGesture.state;
     
     CGPoint translation = [panGesture translationInView:panGesture.view];
+    
+    if (!self.open) {
+        if ([panGesture velocityInView:panGesture.view].x < 0) {
+            return;
+        }
+    }
     
     switch (state) {
         case UIGestureRecognizerStateBegan:
@@ -356,14 +415,26 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
                 if (velocityX >= 0) {
                     if (mainViewScale <= (1.0 - self.zoomScale) / 1.2 + self.zoomScale) {
                         self.open = NO;
-                        [self openMenuAnimated:YES completion:NULL];
+                        [self openMenuAnimated:YES completion:^(BOOL finished) {
+                            if (finished) {
+                                isPaning = !finished;
+                            }
+                        }];
                     } else {
                         self.open = YES;
-                        [self closeMenuAnimated:YES completion:NULL];
+                        [self closeMenuAnimated:YES completion:^(BOOL finished) {
+                            if (finished) {
+                                isPaning = !finished;
+                            }
+                        }];
                     }
                 } else {
                     self.open = YES;
-                    [self closeMenuAnimated:YES completion:NULL];
+                    [self closeMenuAnimated:YES completion:^(BOOL finished) {
+                        if (finished) {
+                            isPaning = !finished;
+                        }
+                    }];
                 }
                 
             } else {
@@ -372,16 +443,28 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
                 if (velocityX <= 0) {
                     if (mainViewScale >= (1.0 - self.zoomScale) / 3.8 + self.zoomScale) {
                         self.open = YES;
-                        [self closeMenuAnimated:YES completion:NULL];
+                        [self closeMenuAnimated:YES completion:^(BOOL finished) {
+                            if (finished) {
+                                isPaning = !finished;
+                            }
+                        }];
                     } else {
                         self.open = NO;
                         [self.leftViewController beginAppearanceTransition:YES animated:YES];
-                        [self openMenuAnimated:YES completion:NULL];
+                        [self openMenuAnimated:YES completion:^(BOOL finished) {
+                            if (finished) {
+                                isPaning = !finished;
+                            }
+                        }];
                     }
                 } else {
                     self.open = NO;
                     [self.leftViewController beginAppearanceTransition:YES animated:YES];
-                    [self openMenuAnimated:YES completion:NULL];
+                    [self openMenuAnimated:YES completion:^(BOOL finished) {
+                        if (finished) {
+                            isPaning = !finished;
+                        }
+                    }];
                 }
                 
             }
@@ -554,6 +637,7 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     [overlayView.layer addAnimation:animation forKey:@"opacity"];
     
     UIViewController *incomingViewController = mainViewController;
+    [self stupCenterViewControllerObserver:mainViewController];
     
     CGFloat outgoingStartX = CGRectGetMaxX(outgoingViewController.view.frame);
     NSTimeInterval changeTimeInterval = kDefaultSwapAnimationDuration;
@@ -628,6 +712,17 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
         mainLayer.shadowOffset = CGSizeZero;
         mainLayer.shadowOpacity = 0.6f;
         mainLayer.shadowRadius = 10.0f;
+    }
+}
+
+#pragma mark - KVO
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"mainScrollView"]) {
+        id chageNewValue = [change valueForKey:@"new"];
+        if ([chageNewValue isKindOfClass:[UIScrollView class]]) {
+            [self setMainScrollView:chageNewValue];
+        }
     }
 }
 
