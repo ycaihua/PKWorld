@@ -18,7 +18,13 @@
 // 添加框架类文件
     #import "XHDrawerController.h"
 
+// 添加主页控制的PageController for UIViewController的类文件
+#import "XHPagesController.h"
+
 // 添加基础控制器
     #import "BaseViewController.h"
+
+// 添加常用头文件
+    #import "HeaderDefault.h"
 
 #endif

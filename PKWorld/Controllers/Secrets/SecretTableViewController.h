@@ -1,5 +1,5 @@
 //
-//  NewsHomeViewController.h
+//  SecretHomeViewController.h
 //  PKWorld
 //
 //  Created by 曾 宪华 on 13-9-30.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewsHomeViewController : BaseViewController
+@interface SecretTableViewController : BaseViewController
 
 @end

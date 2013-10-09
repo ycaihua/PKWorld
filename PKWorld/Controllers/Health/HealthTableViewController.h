@@ -1,5 +1,5 @@
 //
-//  PhotosHomeViewController.h
+//  HealthHomeViewController.h
 //  PKWorld
 //
 //  Created by 曾 宪华 on 13-9-30.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotosHomeViewController : BaseViewController
+@interface HealthTableViewController : BaseViewController
 
 @end

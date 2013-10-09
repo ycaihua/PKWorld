@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainCenterViewController : UIViewController
+@interface MainCenterViewController : XHPagesController <XHPagingDataSource>
+
 @end

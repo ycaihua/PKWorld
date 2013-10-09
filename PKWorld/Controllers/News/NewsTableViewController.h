@@ -1,5 +1,5 @@
 //
-//  PKWorldHomeViewController.h
+//  NewsHomeViewController.h
 //  PKWorld
 //
 //  Created by 曾 宪华 on 13-9-30.
@@ -8,5 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PKWorldHomeViewController : UIViewController
+@interface NewsTableViewController : BaseViewController
+
 @end

@@ -14,6 +14,18 @@ typedef NS_ENUM(NSInteger,XHDrawerSide){
     XHDrawerSideRight,
 };
 
+typedef NS_OPTIONS(NSInteger, XHOpenDrawerGestureMode) {
+    XHOpenDrawerGestureModeNone                     = 0,
+    XHOpenDrawerGestureModePanningNavigationBar     = 1 << 1,
+    XHOpenDrawerGestureModePanningCenterView        = 1 << 2,
+    XHOpenDrawerGestureModeBezelPanningCenterView   = 1 << 3,
+    XHOpenDrawerGestureModeCustom                   = 1 << 4,
+    XHOpenDrawerGestureModeAll                      =   XHOpenDrawerGestureModePanningNavigationBar     |
+    XHOpenDrawerGestureModePanningCenterView        |
+    XHOpenDrawerGestureModeBezelPanningCenterView   |
+    XHOpenDrawerGestureModeCustom,
+};
+
 @interface XHDrawerController : UIViewController
 
 /** Time interval for opening and closing the side menu */
@@ -38,6 +50,8 @@ typedef NS_ENUM(NSInteger,XHDrawerSide){
 @property (nonatomic, strong) UIViewController *mainViewController;
 
 @property (nonatomic, assign, readonly) XHDrawerSide openSide;
+
+@property (nonatomic, assign) XHOpenDrawerGestureMode openDrawerGestureModeMask;
 
 /** Initializer that sets up a menuViewController and a mainViewController
  @param menuViewController The view controller to display in the left view

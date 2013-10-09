@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB1025DE180414AD00CEED90 /* Snip20130926_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DA180414AD00CEED90 /* Snip20130926_4.png */; };
-		AB1025DF180414AD00CEED90 /* Snip20130926_4.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DA180414AD00CEED90 /* Snip20130926_4.png */; };
-		AB1025E0180414AD00CEED90 /* Snip20130926_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DB180414AD00CEED90 /* Snip20130926_3.png */; };
-		AB1025E1180414AD00CEED90 /* Snip20130926_3.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DB180414AD00CEED90 /* Snip20130926_3.png */; };
-		AB1025E2180414AD00CEED90 /* Snip20130926_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DC180414AD00CEED90 /* Snip20130926_2.png */; };
-		AB1025E3180414AD00CEED90 /* Snip20130926_2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DC180414AD00CEED90 /* Snip20130926_2.png */; };
-		AB1025E4180414AD00CEED90 /* Snip20130926_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DD180414AD00CEED90 /* Snip20130926_1.png */; };
-		AB1025E5180414AD00CEED90 /* Snip20130926_1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1025DD180414AD00CEED90 /* Snip20130926_1.png */; };
+		AB351EA0180569350084EDD7 /* XHPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB351E9F180569350084EDD7 /* XHPagesController.m */; };
+		AB351EA1180569350084EDD7 /* XHPagesController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB351E9F180569350084EDD7 /* XHPagesController.m */; };
+		AB351EA318056E470084EDD7 /* DataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB351EA218056E470084EDD7 /* DataSource.plist */; };
+		AB351EA418056E470084EDD7 /* DataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB351EA218056E470084EDD7 /* DataSource.plist */; };
+		AB351EA9180570080084EDD7 /* WATTItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB351EA6180570080084EDD7 /* WATTItemModel.m */; };
+		AB351EAA180570080084EDD7 /* WATTItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AB351EA6180570080084EDD7 /* WATTItemModel.m */; };
+		AB351EAE1805709C0084EDD7 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB351EAD1805709C0084EDD7 /* Data.plist */; };
+		AB351EAF1805709C0084EDD7 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = AB351EAD1805709C0084EDD7 /* Data.plist */; };
+		ABA499CB1805CEF9004F743D /* UIViewController+ConfigureWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA499CA1805CEF9004F743D /* UIViewController+ConfigureWithModel.m */; };
+		ABA499CC1805CEF9004F743D /* UIViewController+ConfigureWithModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA499CA1805CEF9004F743D /* UIViewController+ConfigureWithModel.m */; };
 		ABDB4627180359E30071E14F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4626180359E30071E14F /* Foundation.framework */; };
 		ABDB4629180359E30071E14F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB4628180359E30071E14F /* CoreGraphics.framework */; };
 		ABDB462B180359E30071E14F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDB462A180359E30071E14F /* UIKit.framework */; };
@@ -33,22 +35,22 @@
 		ABDB468718035A370071E14F /* UIView-Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB465E18035A370071E14F /* UIView-Transform.m */; };
 		ABDB468818035A370071E14F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466218035A370071E14F /* BaseViewController.m */; };
 		ABDB468918035A370071E14F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466218035A370071E14F /* BaseViewController.m */; };
-		ABDB468A18035A370071E14F /* HealthHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthHomeViewController.m */; };
-		ABDB468B18035A370071E14F /* HealthHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthHomeViewController.m */; };
-		ABDB468C18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */; };
-		ABDB468D18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */; };
+		ABDB468A18035A370071E14F /* HealthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthTableViewController.m */; };
+		ABDB468B18035A370071E14F /* HealthTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466518035A370071E14F /* HealthTableViewController.m */; };
+		ABDB468C18035A370071E14F /* TheConnotationOfJokesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesTableViewController.m */; };
+		ABDB468D18035A370071E14F /* TheConnotationOfJokesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466818035A370071E14F /* TheConnotationOfJokesTableViewController.m */; };
 		ABDB468E18035A370071E14F /* LeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */; };
 		ABDB468F18035A370071E14F /* LeftSideDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */; };
 		ABDB469018035A370071E14F /* MainCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466E18035A370071E14F /* MainCenterViewController.m */; };
 		ABDB469118035A370071E14F /* MainCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB466E18035A370071E14F /* MainCenterViewController.m */; };
-		ABDB469218035A370071E14F /* NewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsHomeViewController.m */; };
-		ABDB469318035A370071E14F /* NewsHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsHomeViewController.m */; };
-		ABDB469418035A370071E14F /* PhotosHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosHomeViewController.m */; };
-		ABDB469518035A370071E14F /* PhotosHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosHomeViewController.m */; };
-		ABDB469618035A370071E14F /* PKWorldHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldHomeViewController.m */; };
-		ABDB469718035A370071E14F /* PKWorldHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldHomeViewController.m */; };
-		ABDB469818035A370071E14F /* SecretHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretHomeViewController.m */; };
-		ABDB469918035A370071E14F /* SecretHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretHomeViewController.m */; };
+		ABDB469218035A370071E14F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsTableViewController.m */; };
+		ABDB469318035A370071E14F /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467118035A370071E14F /* NewsTableViewController.m */; };
+		ABDB469418035A370071E14F /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosTableViewController.m */; };
+		ABDB469518035A370071E14F /* PhotosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467418035A370071E14F /* PhotosTableViewController.m */; };
+		ABDB469618035A370071E14F /* PKWorldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldTableViewController.m */; };
+		ABDB469718035A370071E14F /* PKWorldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467718035A370071E14F /* PKWorldTableViewController.m */; };
+		ABDB469818035A370071E14F /* SecretTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretTableViewController.m */; };
+		ABDB469918035A370071E14F /* SecretTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467A18035A370071E14F /* SecretTableViewController.m */; };
 		ABDB469A18035A370071E14F /* TakeAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467D18035A370071E14F /* TakeAudioViewController.m */; };
 		ABDB469B18035A370071E14F /* TakeAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467D18035A370071E14F /* TakeAudioViewController.m */; };
 		ABDB469C18035A370071E14F /* TakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB467F18035A370071E14F /* TakePhotoViewController.m */; };
@@ -74,10 +76,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB1025DA180414AD00CEED90 /* Snip20130926_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_4.png; sourceTree = "<group>"; };
-		AB1025DB180414AD00CEED90 /* Snip20130926_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_3.png; sourceTree = "<group>"; };
-		AB1025DC180414AD00CEED90 /* Snip20130926_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_2.png; sourceTree = "<group>"; };
-		AB1025DD180414AD00CEED90 /* Snip20130926_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snip20130926_1.png; sourceTree = "<group>"; };
+		AB351E9E180569350084EDD7 /* XHPagesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHPagesController.h; sourceTree = "<group>"; };
+		AB351E9F180569350084EDD7 /* XHPagesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHPagesController.m; sourceTree = "<group>"; };
+		AB351EA218056E470084EDD7 /* DataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DataSource.plist; sourceTree = "<group>"; };
+		AB351EA5180570080084EDD7 /* WATTItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WATTItemModel.h; sourceTree = "<group>"; };
+		AB351EA6180570080084EDD7 /* WATTItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WATTItemModel.m; sourceTree = "<group>"; };
+		AB351EAD1805709C0084EDD7 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
+		ABA499C71805C4A4004F743D /* HeaderDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderDefault.h; sourceTree = "<group>"; };
+		ABA499C91805CEF9004F743D /* UIViewController+ConfigureWithModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ConfigureWithModel.h"; sourceTree = "<group>"; };
+		ABA499CA1805CEF9004F743D /* UIViewController+ConfigureWithModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ConfigureWithModel.m"; sourceTree = "<group>"; };
 		ABDB4623180359E30071E14F /* PKWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PKWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABDB4626180359E30071E14F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABDB4628180359E30071E14F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,22 +106,22 @@
 		ABDB465E18035A370071E14F /* UIView-Transform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView-Transform.m"; sourceTree = "<group>"; };
 		ABDB466118035A370071E14F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ABDB466218035A370071E14F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		ABDB466418035A370071E14F /* HealthHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthHomeViewController.h; sourceTree = "<group>"; };
-		ABDB466518035A370071E14F /* HealthHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthHomeViewController.m; sourceTree = "<group>"; };
-		ABDB466718035A370071E14F /* TheConnotationOfJokesHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheConnotationOfJokesHomeViewController.h; sourceTree = "<group>"; };
-		ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheConnotationOfJokesHomeViewController.m; sourceTree = "<group>"; };
+		ABDB466418035A370071E14F /* HealthTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthTableViewController.h; sourceTree = "<group>"; };
+		ABDB466518035A370071E14F /* HealthTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthTableViewController.m; sourceTree = "<group>"; };
+		ABDB466718035A370071E14F /* TheConnotationOfJokesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheConnotationOfJokesTableViewController.h; sourceTree = "<group>"; };
+		ABDB466818035A370071E14F /* TheConnotationOfJokesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheConnotationOfJokesTableViewController.m; sourceTree = "<group>"; };
 		ABDB466A18035A370071E14F /* LeftSideDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSideDrawerViewController.h; sourceTree = "<group>"; };
 		ABDB466B18035A370071E14F /* LeftSideDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSideDrawerViewController.m; sourceTree = "<group>"; };
 		ABDB466D18035A370071E14F /* MainCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCenterViewController.h; sourceTree = "<group>"; };
 		ABDB466E18035A370071E14F /* MainCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCenterViewController.m; sourceTree = "<group>"; };
-		ABDB467018035A370071E14F /* NewsHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsHomeViewController.h; sourceTree = "<group>"; };
-		ABDB467118035A370071E14F /* NewsHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsHomeViewController.m; sourceTree = "<group>"; };
-		ABDB467318035A370071E14F /* PhotosHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosHomeViewController.h; sourceTree = "<group>"; };
-		ABDB467418035A370071E14F /* PhotosHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosHomeViewController.m; sourceTree = "<group>"; };
-		ABDB467618035A370071E14F /* PKWorldHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWorldHomeViewController.h; sourceTree = "<group>"; };
-		ABDB467718035A370071E14F /* PKWorldHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWorldHomeViewController.m; sourceTree = "<group>"; };
-		ABDB467918035A370071E14F /* SecretHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretHomeViewController.h; sourceTree = "<group>"; };
-		ABDB467A18035A370071E14F /* SecretHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretHomeViewController.m; sourceTree = "<group>"; };
+		ABDB467018035A370071E14F /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
+		ABDB467118035A370071E14F /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		ABDB467318035A370071E14F /* PhotosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosTableViewController.h; sourceTree = "<group>"; };
+		ABDB467418035A370071E14F /* PhotosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosTableViewController.m; sourceTree = "<group>"; };
+		ABDB467618035A370071E14F /* PKWorldTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWorldTableViewController.h; sourceTree = "<group>"; };
+		ABDB467718035A370071E14F /* PKWorldTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWorldTableViewController.m; sourceTree = "<group>"; };
+		ABDB467918035A370071E14F /* SecretTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretTableViewController.h; sourceTree = "<group>"; };
+		ABDB467A18035A370071E14F /* SecretTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretTableViewController.m; sourceTree = "<group>"; };
 		ABDB467C18035A370071E14F /* TakeAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeAudioViewController.h; sourceTree = "<group>"; };
 		ABDB467D18035A370071E14F /* TakeAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakeAudioViewController.m; sourceTree = "<group>"; };
 		ABDB467E18035A370071E14F /* TakePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoViewController.h; sourceTree = "<group>"; };
@@ -153,6 +160,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB351E9D180569280084EDD7 /* XHPagesController */ = {
+			isa = PBXGroup;
+			children = (
+				AB351E9E180569350084EDD7 /* XHPagesController.h */,
+				AB351E9F180569350084EDD7 /* XHPagesController.m */,
+			);
+			path = XHPagesController;
+			sourceTree = "<group>";
+		};
+		ABA499C31805C48A004F743D /* Conmon */ = {
+			isa = PBXGroup;
+			children = (
+				ABA499C61805C4A4004F743D /* HeaderDefault */,
+			);
+			path = Conmon;
+			sourceTree = "<group>";
+		};
+		ABA499C61805C4A4004F743D /* HeaderDefault */ = {
+			isa = PBXGroup;
+			children = (
+				ABA499C71805C4A4004F743D /* HeaderDefault.h */,
+			);
+			path = HeaderDefault;
+			sourceTree = "<group>";
+		};
+		ABA499C81805CED9004F743D /* UIViewControllerCategory */ = {
+			isa = PBXGroup;
+			children = (
+				ABA499C91805CEF9004F743D /* UIViewController+ConfigureWithModel.h */,
+				ABA499CA1805CEF9004F743D /* UIViewController+ConfigureWithModel.m */,
+			);
+			path = UIViewControllerCategory;
+			sourceTree = "<group>";
+		};
 		ABDB461A180359E30071E14F = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +230,7 @@
 			children = (
 				ABDB4637180359E30071E14F /* AppDelegate.h */,
 				ABDB4638180359E30071E14F /* AppDelegate.m */,
+				ABA499C31805C48A004F743D /* Conmon */,
 				ABDB465B18035A370071E14F /* Categorys */,
 				ABDB46AD18035AA40071E14F /* Vendor */,
 				ABDB468218035A370071E14F /* Models */,
@@ -205,6 +247,8 @@
 			children = (
 				ABDB46A218035A560071E14F /* Resources */,
 				ABDB4630180359E30071E14F /* PKWorld-Info.plist */,
+				AB351EA218056E470084EDD7 /* DataSource.plist */,
+				AB351EAD1805709C0084EDD7 /* Data.plist */,
 				ABDB4631180359E30071E14F /* InfoPlist.strings */,
 				ABDB4634180359E30071E14F /* main.m */,
 				ABDB4636180359E30071E14F /* PKWorld-Prefix.pch */,
@@ -233,6 +277,7 @@
 		ABDB465B18035A370071E14F /* Categorys */ = {
 			isa = PBXGroup;
 			children = (
+				ABA499C81805CED9004F743D /* UIViewControllerCategory */,
 				ABDB465C18035A370071E14F /* UIViewCategory */,
 			);
 			path = Categorys;
@@ -250,15 +295,15 @@
 		ABDB465F18035A370071E14F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB466018035A370071E14F /* BaseViewController */,
-				ABDB466318035A370071E14F /* Health */,
-				ABDB466618035A370071E14F /* Jokes */,
 				ABDB466918035A370071E14F /* Left */,
 				ABDB466C18035A370071E14F /* MainCenter */,
+				ABDB466018035A370071E14F /* BaseViewController */,
+				ABDB467518035A370071E14F /* PKWorld */,
+				ABDB466618035A370071E14F /* Jokes */,
 				ABDB466F18035A370071E14F /* News */,
 				ABDB467218035A370071E14F /* Photos */,
-				ABDB467518035A370071E14F /* PKWorld */,
 				ABDB467818035A370071E14F /* Secrets */,
+				ABDB466318035A370071E14F /* Health */,
 				ABDB467B18035A370071E14F /* TakeUserVisible */,
 			);
 			path = Controllers;
@@ -276,8 +321,8 @@
 		ABDB466318035A370071E14F /* Health */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB466418035A370071E14F /* HealthHomeViewController.h */,
-				ABDB466518035A370071E14F /* HealthHomeViewController.m */,
+				ABDB466418035A370071E14F /* HealthTableViewController.h */,
+				ABDB466518035A370071E14F /* HealthTableViewController.m */,
 			);
 			path = Health;
 			sourceTree = "<group>";
@@ -285,8 +330,8 @@
 		ABDB466618035A370071E14F /* Jokes */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB466718035A370071E14F /* TheConnotationOfJokesHomeViewController.h */,
-				ABDB466818035A370071E14F /* TheConnotationOfJokesHomeViewController.m */,
+				ABDB466718035A370071E14F /* TheConnotationOfJokesTableViewController.h */,
+				ABDB466818035A370071E14F /* TheConnotationOfJokesTableViewController.m */,
 			);
 			path = Jokes;
 			sourceTree = "<group>";
@@ -305,6 +350,8 @@
 			children = (
 				ABDB466D18035A370071E14F /* MainCenterViewController.h */,
 				ABDB466E18035A370071E14F /* MainCenterViewController.m */,
+				AB351EA5180570080084EDD7 /* WATTItemModel.h */,
+				AB351EA6180570080084EDD7 /* WATTItemModel.m */,
 			);
 			path = MainCenter;
 			sourceTree = "<group>";
@@ -312,8 +359,8 @@
 		ABDB466F18035A370071E14F /* News */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB467018035A370071E14F /* NewsHomeViewController.h */,
-				ABDB467118035A370071E14F /* NewsHomeViewController.m */,
+				ABDB467018035A370071E14F /* NewsTableViewController.h */,
+				ABDB467118035A370071E14F /* NewsTableViewController.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -321,8 +368,8 @@
 		ABDB467218035A370071E14F /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB467318035A370071E14F /* PhotosHomeViewController.h */,
-				ABDB467418035A370071E14F /* PhotosHomeViewController.m */,
+				ABDB467318035A370071E14F /* PhotosTableViewController.h */,
+				ABDB467418035A370071E14F /* PhotosTableViewController.m */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -330,8 +377,8 @@
 		ABDB467518035A370071E14F /* PKWorld */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB467618035A370071E14F /* PKWorldHomeViewController.h */,
-				ABDB467718035A370071E14F /* PKWorldHomeViewController.m */,
+				ABDB467618035A370071E14F /* PKWorldTableViewController.h */,
+				ABDB467718035A370071E14F /* PKWorldTableViewController.m */,
 			);
 			path = PKWorld;
 			sourceTree = "<group>";
@@ -339,8 +386,8 @@
 		ABDB467818035A370071E14F /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
-				ABDB467918035A370071E14F /* SecretHomeViewController.h */,
-				ABDB467A18035A370071E14F /* SecretHomeViewController.m */,
+				ABDB467918035A370071E14F /* SecretTableViewController.h */,
+				ABDB467A18035A370071E14F /* SecretTableViewController.m */,
 			);
 			path = Secrets;
 			sourceTree = "<group>";
@@ -384,10 +431,6 @@
 		ABDB46A318035A560071E14F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AB1025DA180414AD00CEED90 /* Snip20130926_4.png */,
-				AB1025DB180414AD00CEED90 /* Snip20130926_3.png */,
-				AB1025DC180414AD00CEED90 /* Snip20130926_2.png */,
-				AB1025DD180414AD00CEED90 /* Snip20130926_1.png */,
 				ABDB46A418035A560071E14F /* galaxy.png */,
 			);
 			path = Images;
@@ -396,6 +439,7 @@
 		ABDB46AD18035AA40071E14F /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				AB351E9D180569280084EDD7 /* XHPagesController */,
 				ABDB46AE18035AA40071E14F /* XHDrawerController */,
 			);
 			path = Vendor;
@@ -486,10 +530,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDB4633180359E30071E14F /* InfoPlist.strings in Resources */,
-				AB1025E4180414AD00CEED90 /* Snip20130926_1.png in Resources */,
-				AB1025E0180414AD00CEED90 /* Snip20130926_3.png in Resources */,
-				AB1025DE180414AD00CEED90 /* Snip20130926_4.png in Resources */,
-				AB1025E2180414AD00CEED90 /* Snip20130926_2.png in Resources */,
+				AB351EA318056E470084EDD7 /* DataSource.plist in Resources */,
+				AB351EAE1805709C0084EDD7 /* Data.plist in Resources */,
 				ABDB46A518035A560071E14F /* galaxy.png in Resources */,
 				ABDB463E180359E30071E14F /* Images.xcassets in Resources */,
 			);
@@ -499,11 +541,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB1025E1180414AD00CEED90 /* Snip20130926_3.png in Resources */,
-				AB1025E3180414AD00CEED90 /* Snip20130926_2.png in Resources */,
+				AB351EA418056E470084EDD7 /* DataSource.plist in Resources */,
 				ABDB4650180359E40071E14F /* InfoPlist.strings in Resources */,
-				AB1025DF180414AD00CEED90 /* Snip20130926_4.png in Resources */,
-				AB1025E5180414AD00CEED90 /* Snip20130926_1.png in Resources */,
+				AB351EAF1805709C0084EDD7 /* Data.plist in Resources */,
 				ABDB46A618035A560071E14F /* galaxy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,22 +556,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDB46B118035AA40071E14F /* XHDrawerController.m in Sources */,
-				ABDB468C18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */,
-				ABDB468A18035A370071E14F /* HealthHomeViewController.m in Sources */,
+				ABDB468C18035A370071E14F /* TheConnotationOfJokesTableViewController.m in Sources */,
+				ABDB468A18035A370071E14F /* HealthTableViewController.m in Sources */,
 				ABDB469E18035A370071E14F /* TakeVideoViewController.m in Sources */,
+				AB351EA0180569350084EDD7 /* XHPagesController.m in Sources */,
 				ABDB469018035A370071E14F /* MainCenterViewController.m in Sources */,
+				AB351EA9180570080084EDD7 /* WATTItemModel.m in Sources */,
 				ABDB469A18035A370071E14F /* TakeAudioViewController.m in Sources */,
 				ABDB469C18035A370071E14F /* TakePhotoViewController.m in Sources */,
-				ABDB469818035A370071E14F /* SecretHomeViewController.m in Sources */,
+				ABDB469818035A370071E14F /* SecretTableViewController.m in Sources */,
 				ABDB4639180359E30071E14F /* AppDelegate.m in Sources */,
 				ABDB468818035A370071E14F /* BaseViewController.m in Sources */,
 				ABDB4635180359E30071E14F /* main.m in Sources */,
-				ABDB469618035A370071E14F /* PKWorldHomeViewController.m in Sources */,
-				ABDB469418035A370071E14F /* PhotosHomeViewController.m in Sources */,
-				ABDB469218035A370071E14F /* NewsHomeViewController.m in Sources */,
+				ABDB469618035A370071E14F /* PKWorldTableViewController.m in Sources */,
+				ABDB469418035A370071E14F /* PhotosTableViewController.m in Sources */,
+				ABDB469218035A370071E14F /* NewsTableViewController.m in Sources */,
 				ABDB468E18035A370071E14F /* LeftSideDrawerViewController.m in Sources */,
 				ABDB468618035A370071E14F /* UIView-Transform.m in Sources */,
 				ABDB46A018035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
+				ABA499CB1805CEF9004F743D /* UIViewController+ConfigureWithModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,22 +582,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABDB469318035A370071E14F /* NewsHomeViewController.m in Sources */,
-				ABDB469718035A370071E14F /* PKWorldHomeViewController.m in Sources */,
+				ABDB469318035A370071E14F /* NewsTableViewController.m in Sources */,
+				ABDB469718035A370071E14F /* PKWorldTableViewController.m in Sources */,
+				ABA499CC1805CEF9004F743D /* UIViewController+ConfigureWithModel.m in Sources */,
 				ABDB46A118035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
 				ABDB4652180359E40071E14F /* PKWorldTests.m in Sources */,
-				ABDB468D18035A370071E14F /* TheConnotationOfJokesHomeViewController.m in Sources */,
-				ABDB469918035A370071E14F /* SecretHomeViewController.m in Sources */,
+				ABDB468D18035A370071E14F /* TheConnotationOfJokesTableViewController.m in Sources */,
+				ABDB469918035A370071E14F /* SecretTableViewController.m in Sources */,
 				ABDB469D18035A370071E14F /* TakePhotoViewController.m in Sources */,
 				ABDB468918035A370071E14F /* BaseViewController.m in Sources */,
 				ABDB46B218035AA40071E14F /* XHDrawerController.m in Sources */,
-				ABDB469518035A370071E14F /* PhotosHomeViewController.m in Sources */,
+				ABDB469518035A370071E14F /* PhotosTableViewController.m in Sources */,
+				AB351EAA180570080084EDD7 /* WATTItemModel.m in Sources */,
 				ABDB468718035A370071E14F /* UIView-Transform.m in Sources */,
-				ABDB468B18035A370071E14F /* HealthHomeViewController.m in Sources */,
+				ABDB468B18035A370071E14F /* HealthTableViewController.m in Sources */,
 				ABDB469118035A370071E14F /* MainCenterViewController.m in Sources */,
 				ABDB469F18035A370071E14F /* TakeVideoViewController.m in Sources */,
 				ABDB469B18035A370071E14F /* TakeAudioViewController.m in Sources */,
 				ABDB468F18035A370071E14F /* LeftSideDrawerViewController.m in Sources */,
+				AB351EA1180569350084EDD7 /* XHPagesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +718,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
 				INFOPLIST_FILE = "PKWorld/PKWorld-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -686,6 +733,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PKWorld/PKWorld-Prefix.pch";
 				INFOPLIST_FILE = "PKWorld/PKWorld-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

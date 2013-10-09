@@ -49,7 +49,7 @@
     backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:backgroundImageView];
     
-    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     closeButton.frame = CGRectMake(10.0f, 100.0f, 200.0f, 44.0f);
     [closeButton setBackgroundColor:[UIColor whiteColor]];
     [closeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -57,7 +57,7 @@
     [closeButton addTarget:self action:@selector(closeButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:closeButton];
     
-    UIButton *changeButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     changeButton.frame = CGRectMake(10.0f, 200.0f, 200.0f, 44.0f);
     [changeButton setTitle:@"Swap" forState:UIControlStateNormal];
     [changeButton setBackgroundColor:[UIColor greenColor]];
@@ -67,7 +67,7 @@
 }
 
 - (void)changeButtonPressed {
-    [self.xh_drawerController setMainViewController:[[MainCenterViewController alloc] init]  animated:YES closeMenu:YES];
+    [self.xh_drawerController setMainViewController:[[UINavigationController alloc] initWithRootViewController:[[MainCenterViewController alloc] init]] animated:YES closeMenu:YES];
 }
 
 - (void)closeButtonPressed {

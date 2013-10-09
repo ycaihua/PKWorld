@@ -89,17 +89,7 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     self.animationDuration = kDefaultAnimationDuration;
     self.edgeOffset = UIOffsetMake((isIpad ? -50 : 18), 0);
     self.zoomScale = (isIpad ? 0.75 : 0.65);
-}
-
-#pragma mark - 状态设置
-
--(void)setOpenSide:(XHDrawerSide)openSide{
-    if(_openSide != openSide){
-        _openSide = openSide;
-        if(openSide == XHDrawerSideNone){
-            [self.leftViewController.view setHidden:YES];
-        }
-    }
+    self.openDrawerGestureModeMask = XHOpenDrawerGestureModeAll;
 }
 
 #pragma mark - UIViewController
@@ -253,6 +243,7 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
         }
     }
     
+    /*
     UIViewController * oldCenterViewController = self.mainViewController;
     if(oldCenterViewController){
         if(animated == NO){
@@ -264,6 +255,7 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
             [oldCenterViewController endAppearanceTransition];
         }
     }
+     */
     
     _mainViewController = centerViewController;
     [self stupCenterViewControllerObserver:centerViewController];
@@ -273,11 +265,13 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
     [self.containerView addSubview:self.mainViewController.view];
     [self.mainViewController.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
     
+    /*
     if(animated == NO) {
         [self.mainViewController beginAppearanceTransition:YES animated:NO];
         [self.mainViewController endAppearanceTransition];
         [self.mainViewController didMoveToParentViewController:self];
     }
+     */
 }
 
 - (void)stupCenterViewControllerObserver:(UIViewController *)mainViewController {
@@ -290,8 +284,9 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
         [viewController addObserver:self forKeyPath:@"mainScrollView" options:NSKeyValueObservingOptionNew context:NULL];
     } else if ([mainViewController isKindOfClass:[UIViewController class]]) {
         UIScrollView *mainScrollView = [mainViewController valueForKey:@"mainScrollView"];
-        if (mainScrollView)
+        if (mainScrollView) {
             [self setMainScrollView:mainScrollView];
+        }
         [mainViewController addObserver:self forKeyPath:@"mainScrollView" options:NSKeyValueObservingOptionNew context:NULL];
     }
 }
@@ -305,6 +300,9 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
 }
 
 - (void)scrollViewPanGestureHandle:(UIPanGestureRecognizer *)panGesture {
+    if (self.openDrawerGestureModeMask == XHOpenDrawerGestureModeNone)
+        return ;
+    
     if (self.mainScrollView.contentOffset.x < 0) {
         isPaning = YES;
     } else if (self.mainScrollView.contentOffset.x > (self.mainScrollView.contentSize.width - CGRectGetWidth(self.mainScrollView.frame))) {
@@ -322,15 +320,12 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
 }
 
 - (void)panGestureHandle:(UIPanGestureRecognizer *)panGesture {
+    if (self.openDrawerGestureModeMask == XHOpenDrawerGestureModeNone)
+        return ;
+    
     UIGestureRecognizerState state = panGesture.state;
     
     CGPoint translation = [panGesture translationInView:panGesture.view];
-    
-    if (!self.open) {
-        if ([panGesture velocityInView:panGesture.view].x < 0) {
-            return;
-        }
-    }
     
     switch (state) {
         case UIGestureRecognizerStateBegan:
@@ -352,7 +347,6 @@ static NSTimeInterval const kDefaultSwapAnimationClosedDuration = 0.45;
                 
                 if (xOffset > 0) {
                     // 正常的缩小和向右边移动
-                    
                     
                     // left
                     CGAffineTransform leftScaleTransform = CGAffineTransformScale(menuCloseTransfrom, scaleOffset * (isIpad ? 0.88 : 1), scaleOffset * (isIpad ? 0.88 : 1));
