@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainCenterModel.h"
 
 @interface BaseViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, XHPageProtocol>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *dataSource;
+@property (nonatomic, strong) MainCenterModel *mainCenterModel;
 @end

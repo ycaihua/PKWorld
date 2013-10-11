@@ -10,4 +10,8 @@
 
 @implementation UIViewController (ConfigureWithModel)
 
+- (void)configureWithModel:(id)model {
+    
+}
+
 @end

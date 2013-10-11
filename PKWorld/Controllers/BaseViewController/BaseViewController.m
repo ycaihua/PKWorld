@@ -21,21 +21,25 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         if (isIOS7) {
-            _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
-            _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+            _tableView.contentInset = UIEdgeInsetsMake(AdptNavigationBarAndStatusBarHeight + ItemBarHeight, 0, 0, 0);
+            _tableView.scrollIndicatorInsets = UIEdgeInsetsMake(AdptNavigationBarAndStatusBarHeight + ItemBarHeight, 0, 0, 0);
         }
-        
         [self.view addSubview:self.tableView];
+//        [UIView transitionWithView:self.view duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+//            
+//        }completion:^(BOOL finished) {
+//            
+//        }];
+        
     }
     return _tableView;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    self.view.backgroundColor = [UIColor whiteColor];
 }
-
 
 - (void)viewDidAppear:(BOOL)animated {
 }

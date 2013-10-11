@@ -19,10 +19,18 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     LeftSideDrawerViewController *leftSideDrawerViewController = [[LeftSideDrawerViewController alloc] init];
-    MainCenterViewController *mainCenterViewController = [[MainCenterViewController alloc] init];
     
     
-    XHDrawerController *drawerController = [[XHDrawerController alloc] initWithLeftViewController:leftSideDrawerViewController mainViewController:[[UINavigationController alloc] initWithRootViewController:mainCenterViewController]];
+    MainCenterModel *mainCenterItemModel = [[MainCenterModel alloc] init];
+    mainCenterItemModel.mainTableViewControllerClassName = @"PKWorldTableViewController";
+    mainCenterItemModel.mainTitle = @"PK世界";
+    
+    MainCenterViewController *mainCenterViewController = [[MainCenterViewController alloc] initWithMainCenterItemModel:mainCenterItemModel];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainCenterViewController];
+    
+    
+    XHDrawerController *drawerController = [[XHDrawerController alloc] initWithLeftViewController:leftSideDrawerViewController mainViewController:navigationController];
     self.window.rootViewController = drawerController;
     
     [self.window makeKeyAndVisible];

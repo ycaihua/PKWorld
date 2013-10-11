@@ -7,7 +7,7 @@
 //
 
 #import "PKWorldTableViewController.h"
-#import "PhotosTableViewController.h"
+#import "PKWorldDetailViewController.h"
 
 @interface PKWorldTableViewController ()
 
@@ -15,22 +15,7 @@
 
 @implementation PKWorldTableViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.title = @"新闻";
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self loadDataSource];
-}
+#pragma mark - DataSource
 
 - (void)loadDataSource {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -45,17 +30,49 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.dataSource = dataSources;
             [self.tableView reloadData];
+            [self.tableView flashScrollIndicators];
         });
     });
+}
+
+#pragma mark - Left cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // 在这里进行下拉刷新反应
+    // 然后根据网络情况下载数据
+    
+    // 这个是获取本地数据，因为一开始就给他数据了
+    [self loadDataSource];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - XHPageDelegate
 
 - (void)configureWithModel:(id)model {
-    
+    self.mainCenterModel = model;
 }
 
 #pragma mark - UITableView
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
@@ -74,6 +91,7 @@
     NSString *itemTitle = [self.dataSource objectAtIndex:indexPath.row];
     
     cell.textLabel.text = itemTitle;
+//    cell.imageView.image = [UIImage imageNamed:@"cellImage.png"];
     
     return cell;
 }
@@ -82,7 +100,7 @@
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     
     UINavigationController *navi = self.navigationController;
-    PhotosTableViewController *news = [[PhotosTableViewController alloc] init];
+    PKWorldDetailViewController *news = [[PKWorldDetailViewController alloc] init];
     [navi pushViewController:news animated:YES];
 }
 

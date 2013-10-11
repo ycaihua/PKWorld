@@ -7,149 +7,132 @@
 //
 
 #import "MainCenterViewController.h"
-#import "WATTItemModel.h"
 #import "UIViewController+ConfigureWithModel.h"
 
 @interface MainCenterViewController () {
-    NSMutableArray *_listOfItem;
 }
+@property (nonatomic, strong) NSArray *pages;
+@property (nonatomic, strong) MainCenterModel *itemModel;
 @end
 
 @implementation MainCenterViewController
 
--(void)viewDidLoad{
+#pragma mark - getter
+
+- (NSArray *)pages {
+    if (!_pages) {
+        _pages = [[NSArray alloc] init];
+    }
+    return _pages;
+}
+
+- (id)modelAtIndex:(NSUInteger)index{
+    return [self.pages objectAtIndex:index];
+}
+
+#pragma mark - Action
+
+- (void)openLeft {
+    [self.xh_drawerController openMenuAnimated:YES completion:^(BOOL finished) {
+        
+    }];
+}
+
+#pragma mark - Left cycle
+
+- (id)initWithMainCenterItemModel:(MainCenterModel *)itemModel {
+    self = [super init];
+    if (self) {
+        self.itemModel = itemModel;
+    }
+    return self;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = self.itemModel.mainTitle;
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"left" style:UIBarButtonItemStylePlain target:self action:@selector(openLeft)];
+    
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
-    self.dataSource = self;
-    self.direction = XHSlidingDirectionHorizontal;
     [self loadDataSource];
-    self.bounces = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"main viewDidAppear");
-}
-
-- (void)loadDataSource {
-        [self _loadItems]; // Load the data
-    
-    
-    
-}
-
-#pragma mark - data
-
--(void)_loadItems{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        if(!_listOfItem){
-            _listOfItem=[NSMutableArray array];
-        }
-        NSArray *dictionary = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"]];
-        for (NSString *className in dictionary) {
-            WATTItemModel *model=[WATTItemModel alloc];
-            model.imageName=className;
-            [_listOfItem addObject:model];
-        }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self populateAndGoToIndex:0
-                              animated:NO];
-        });
-    });
-    
-}
-
--(void)_addItemForIndex:(NSInteger)index{
-    WATTItemModel *model=[WATTItemModel alloc];
-    model.imageName=[NSString stringWithFormat:@"nombres.00%i.jpg",index];
-    [_listOfItem insertObject:model atIndex:index];
-}
-
-
-
--(id)_modelAtIndex:(NSUInteger)index{
-    return [_listOfItem objectAtIndex:index];
-}
-
-
-
--(void)pageIndexDidChange:(NSUInteger)pageIndex{
-    [self setScrollToTopOfCurrentViewController:YES];
-    //A sample of dynamic injection
-    //
-//    if(pageIndex==3){
-//        if(![[self _modelAtIndex:4] isKindOfClass:[WATTItemModel class]]){
-//            [self _addItemForIndex:4];
-//            //[self populate];
-//        }
-//    }
-}
-
-
-#pragma mark -
-#pragma mark WATTPagingDataSource
-
-
--(UIViewController*)viewControllerForIndex:(NSUInteger)index{
-    
-    
-//    if([[self _modelAtIndex:index] isKindOfClass:[WATTItemModel class]]){
-    
-        // 1- We try to reuse an existing viewController
-        //        WATTItemViewController*controller=(WATTItemViewController*)[self dequeueViewControllerWithClass:[WATTItemViewController class]];
-        
-        // 2- If there is no view Controllers we instanciate one.
-        UIViewController *controller=nil;
-    WATTItemModel *item = [self _modelAtIndex:index];
-    controller = [[NSClassFromString(item.imageName) alloc] init];
-        // 3- Important : controller.view must be called once
-        // So we test it to for the initialization cycle, before to configure
-        if(controller.view){
-            // 4 - We pass the model to the view Controller.
-            [controller configureWithModel:item];
-        }
-        return controller;
-//    }
-    
-    return nil;
-}
-
-
--(NSUInteger)pageCount{
-    return _listOfItem.count;
-}
-
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"main viewWillAppear");
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    NSLog(@"main viewDidDisappear");
 }
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    NSLog(@"main viewWillDisappear");
-}
-
-- (void)openMenu {
-}
-
-- (void)openRight {
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload {
+    [super viewDidUnload];
+}
+
+
+#pragma mark - loadDataSource
+
+- (void)loadDataSource {
+    self.dataSource = self;
+    self.direction = XHSlidingDirectionHorizontal;
+    self.bounces = YES;
+    NSArray *dictionary = [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"]];
+    NSMutableArray *pages = [[NSMutableArray alloc] init];
+    for (NSString *className in dictionary) {
+        MainCenterModel *model = [MainCenterModel alloc];
+        model.mainTableViewControllerClassName = self.itemModel.mainTableViewControllerClassName;
+        model.mainTitle = self.itemModel.mainTitle;
+        model.pageItemTitle = className;
+        model.seleted = NO;
+        [pages addObject:model];
+    }
+    self.pages = pages;
+    [self populateAndGoToIndex:0
+                      animated:NO];
+}
+
+#pragma mark - 重写方法
+
+- (void)pageIndexDidChange:(NSUInteger)pageIndex{
+    [self setScrollToTopOfCurrentViewController:YES];
+}
+
+
+#pragma mark -
+#pragma mark XHPagingDataSource
+
+- (NSArray *)items {
+    return self.pages;
+}
+
+- (UIViewController*)viewControllerForIndex:(NSUInteger)index {
+    UIViewController *controller = nil;
+    MainCenterModel *item = [self modelAtIndex:index];
+    controller = [[NSClassFromString(item.mainTableViewControllerClassName) alloc] init];
+    if (controller.view) {
+        [controller configureWithModel:item];
+    }
+    return controller;
+}
+
+
+- (NSUInteger)pageCount{
+    return self.pages.count;
 }
 
 @end

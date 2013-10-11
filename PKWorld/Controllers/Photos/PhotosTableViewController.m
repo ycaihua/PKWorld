@@ -14,25 +14,7 @@
 
 @implementation PhotosTableViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    self.title = @"图集";
-    self.view.backgroundColor = [UIColor blackColor];
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    [self loadDataSource];
-}
+#pragma mark - DataSource
 
 - (void)loadDataSource {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -51,13 +33,42 @@
     });
 }
 
+#pragma mark - Left cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // 这个是获取本地数据，因为一开始就给他数据了
+    [self loadDataSource];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    // 在这里进行下拉刷新反应
+    // 然后根据网络情况下载数据
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
 #pragma mark - XHPageDelegate
 
 - (void)configureWithModel:(id)model {
-    
+    self.mainCenterModel = model;
 }
 
 #pragma mark - UITableView
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.dataSource.count;
@@ -76,6 +87,7 @@
     NSString *itemTitle = [self.dataSource objectAtIndex:indexPath.row];
     
     cell.textLabel.text = itemTitle;
+    cell.imageView.image = [UIImage imageNamed:@"meicon.png"];
     
     return cell;
 }

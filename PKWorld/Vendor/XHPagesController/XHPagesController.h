@@ -15,6 +15,10 @@
 #define XHLog(format, ... ){}
 #endif
 
+#define ItemBarHeight 35
+
+#define AdptNavigationBarAndStatusBarHeight 64
+
 @protocol XHPagingDataSource;
 @protocol XHPageProtocol;
 
@@ -117,8 +121,9 @@ typedef enum {
 
 @protocol XHPagingDataSource <NSObject>
 @required
--(UIViewController*)viewControllerForIndex:(NSUInteger)index;
--(NSUInteger)pageCount;
+- (UIViewController*)viewControllerForIndex:(NSUInteger)index;
+- (NSUInteger)pageCount;
+- (NSArray *)items;
 @end
 
 
@@ -127,5 +132,5 @@ typedef enum {
 
 @protocol XHPageProtocol <NSObject>
 @required
--(void)configureWithModel:(id)model;
+- (void)configureWithModel:(id)model;
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainCenterViewController : XHPagesController <XHPagingDataSource>
+#import "MainCenterModel.h"
 
+@interface MainCenterViewController : XHPagesController <XHPagingDataSource>
+- (id)initWithMainCenterItemModel:(MainCenterModel *)itemModel;
 @end

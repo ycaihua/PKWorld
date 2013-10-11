@@ -7,11 +7,11 @@
 //
 
 #import "XHPagesController.h"
+#import "XHSegmentControl.h"
 
-@interface XHPagesController () {
-    // The scrollview that host the other views.
-//    UIScrollView            *_mainScrollView;
-    
+#define ScrollViewIntroBaseTag 100
+
+@interface XHPagesController () <XHSegmentControlDataSource> {
     // We use a dictionary of mutable arrays
     // Each key correspond to the "identifier" we use to dequeue
     
@@ -22,16 +22,36 @@
     BOOL _IOS7ANDGREATER;
 }
 @property (nonatomic, strong) UIScrollView *mainScrollView;
+@property (nonatomic, strong) XHSegmentControl *xh_segmentControl;
 @end
 
 @implementation XHPagesController
 @synthesize mainScrollView = _mainScrollView;
+@synthesize xh_segmentControl = _xh_segmentControl;
+
+#pragma mark - getter
+
+- (XHSegmentControl *)xh_segmentControl {
+    if (!_xh_segmentControl) {
+        // Configure and add the SegementControl
+        CGFloat navigationBarAndStatuBarHeight = 0.;
+        if (_IOS7ANDGREATER) {
+            navigationBarAndStatuBarHeight += AdptNavigationBarAndStatusBarHeight;
+        }
+        _xh_segmentControl = [[XHSegmentControl alloc] initWithFrame:CGRectMake(0, navigationBarAndStatuBarHeight, CGRectGetWidth(self.mainScrollView.bounds), ItemBarHeight) withDataSource:self];
+        _xh_segmentControl.titleFont = [UIFont systemFontOfSize:13];
+        _xh_segmentControl.backgroundColor = self.backgroundColor;
+        [self.view addSubview:_xh_segmentControl];
+    }
+    return _xh_segmentControl;
+}
 
 #pragma mark -
 #pragma mark life cycle
 
-- (void)viewDidLoad{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
     _IOS7ANDGREATER=(floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1);
     _viewControllers=[NSMutableDictionary dictionary];
     _indexes=[NSMutableArray array];
@@ -43,7 +63,7 @@
     // Set up the main view
     [self.view setAutoresizesSubviews:YES];
     [self.view setAutoresizingMask:UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight];
-//    [self.view setOpaque:YES];
+    [self.view setOpaque:YES];
     [self.view setBounds:[self _adpativeReferenceBounds]];
     
     // Configure and add the scroll view
@@ -60,10 +80,8 @@
     
     [self.view addSubview:_mainScrollView];
     [self.view sendSubviewToBack:_mainScrollView]; // If there are for example next and previous button.
-    self.backgroundColor=[UIColor grayColor]; // We setup to black by default
-    
+    self.backgroundColor = [UIColor whiteColor]; // We setup to whiteColor by default
 }
-
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -84,8 +102,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void)removeFromParentViewController{
     [super removeFromParentViewController];
@@ -109,6 +125,24 @@
     
     _backgroundColor=nil;
     
+}
+
+#pragma mark - XHSegement DataSource
+
+- (NSInteger)numberOfItemsInSegmentControl:(XHSegmentControl *)sgmCtrl {
+    return [[self.dataSource items] count];
+}
+
+- (CGFloat)widthForEachItemInsegmentControl:(XHSegmentControl *)sgmCtrl {
+    return CGRectGetWidth(sgmCtrl.frame) / 5;
+}
+
+- (id)segmentControl:(XHSegmentControl *)sgmCtrl titleForItemAtIndex:(NSInteger)index {
+    return [[self.dataSource items] objectAtIndex:index];
+}
+
+- (void)segmentControl:(XHSegmentControl *)sgmCtrl didSelectAtIndex:(NSInteger)index {
+    [self goToPage:index animated:NO];
 }
 
 #pragma mark -
@@ -235,10 +269,11 @@
     }
     
     NSMutableArray *list=[_viewControllers valueForKey:identifier];
-    if( [list indexOfObject:controller] == NSNotFound ){
+    if( [list indexOfObject:controller] == NSNotFound ) {
         [list addObject:controller];
-        if(![controller.parentViewController isEqual:self]){
+        if(![controller.parentViewController isEqual:self]) {
             [self addChildViewController:controller];
+            [self willMoveToParentViewController:controller];
             [controller.view setFrame:[self _referenceBounds]];
             [_mainScrollView addSubview:controller.view]; //
             [controller didMoveToParentViewController:self];
@@ -246,12 +281,11 @@
     }
 }
 
-
 - (void)_positionViewFrom:(UIViewController*)controller
                  atIndex:(NSUInteger)index{
     CGRect pageFrame = [self _adpativeReferenceBounds];
     if(self.direction == XHSlidingDirectionHorizontal) {
-        pageFrame.origin.y = (_IOS7ANDGREATER ? -64 : 0);
+        pageFrame.origin.y = (_IOS7ANDGREATER ? -AdptNavigationBarAndStatusBarHeight : 0);
         CGFloat x=[self _adpativeReferenceBounds].size.width * (CGFloat)index;
         pageFrame.origin.x = x;
     } else{
@@ -303,7 +337,7 @@
     return nil;
 }
 
-- (BOOL)_pageIsPreparedAt:(NSUInteger)index{
+- (BOOL)_pageIsPreparedAt:(NSUInteger)index {
     if([_indexes count]>index){
         if([_indexes objectAtIndex:index] &&
            [[_indexes objectAtIndex:index]class]!=[NSNull class]){
@@ -314,7 +348,7 @@
 }
 
 
-- (BOOL)_pageIsVisibleAt:(NSUInteger)index{
+- (BOOL)_pageIsVisibleAt:(NSUInteger)index {
     if([self _pageIsPreparedAt:index]){
         UIViewController *__weak child=(UIViewController*)[_indexes objectAtIndex:index];
         return CGRectIntersectsRect(_mainScrollView.bounds,child.view.frame);
@@ -325,23 +359,38 @@
 
 #pragma mark -
 
-- (void)populateAndGoToIndex:(NSUInteger)index animated:(BOOL)animated{
-    _mainScrollView.contentSize=[self _scrollViewContentSize];
+- (void)populateAndGoToIndex:(NSUInteger)index animated:(BOOL)animated {
+    [self.xh_segmentControl reloadData];
+    
+    CGSize mainScrollViewContentSize = [self _scrollViewContentSize];
+    
+    _mainScrollView.contentSize = mainScrollViewContentSize;
     [self goToPage:index
           animated:animated];
 }
-
 
 - (CGSize)_scrollViewContentSize{
     NSInteger minPageCount = [self.dataSource pageCount];
     if (minPageCount == 0){
         minPageCount = 1;
     }
+    
+    for (int i = 0; i < minPageCount; i ++) {
+        CGRect labelFrame = CGRectMake(i * CGRectGetWidth(self.view.bounds), 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds));
+        UILabel *label = [[UILabel alloc] initWithFrame:labelFrame];
+        label.tag = ScrollViewIntroBaseTag + i;
+        label.backgroundColor = [UIColor whiteColor];
+        label.text = @"网易";
+        label.font = [UIFont boldSystemFontOfSize:30];
+        label.textAlignment = UITextAlignmentCenter;
+        [_mainScrollView addSubview:label];
+    }
+    
     CGSize scrollViewContentSize;
     if(self.direction == XHSlidingDirectionHorizontal){
         CGFloat navigationBarAndStatusBarHeight = 0.;
         if (_IOS7ANDGREATER) {
-            navigationBarAndStatusBarHeight += 64;
+            navigationBarAndStatusBarHeight += AdptNavigationBarAndStatusBarHeight;
         }
         scrollViewContentSize = CGSizeMake(_mainScrollView.frame.size.width * minPageCount, _mainScrollView.frame.size.height - navigationBarAndStatusBarHeight);
         return scrollViewContentSize;
@@ -351,15 +400,11 @@
     }
 }
 
-
-
-
 - (void)nextPageAnimated:(BOOL)animated;{
     if([self.dataSource pageCount]>0){
         [self goToPage:_pageIndex+1 animated:animated];
     }
 }
-
 
 - (void)previousPageAnimated:(BOOL)animated{
     if([self.dataSource pageCount]>0){
@@ -367,11 +412,9 @@
     }
 }
 
-
 - (void)pageIndexDidChange:(NSUInteger)pageIndex{
     // No implementation
 }
-
 
 - (void)goToPage:(NSUInteger)index
        animated:(BOOL)animated{
@@ -385,7 +428,7 @@
         
         _futureIndex=index;
         [self _preparePageAtIndex:index];
-        BOOL horizontal=(self.direction==XHSlidingDirectionHorizontal);
+        BOOL horizontal=(self.direction == XHSlidingDirectionHorizontal);
         [_mainScrollView scrollRectToVisible:CGRectMake(_mainScrollView.frame.size.width * ((horizontal)?index:0.f),
                                                     _mainScrollView.frame.size.height * ((!horizontal)?index:0.f),
                                                     _mainScrollView.frame.size.width,
@@ -395,7 +438,6 @@
         [self pageIndexDidChange:_pageIndex];
     }
 }
-
 
 /**
  Returns the curent viewController (the most central)
@@ -422,7 +464,7 @@
             [c setScrollsToTop:NO];
         }
         UITableView *tableView = [c valueForKey:@"tableView"];
-        if (tableView) {
+        if ([tableView respondsToSelector:@selector(setScrollsToTop:)]) {
             [tableView setScrollsToTop:NO];
         }
     }
@@ -431,30 +473,37 @@
         [vc setScrollsToTop:scrollToTop];
     }
     UITableView *tableView = [vc valueForKey:@"tableView"];
-    if (tableView) {
+    if ([tableView respondsToSelector:@selector(setScrollsToTop:)]) {
         [tableView setScrollsToTop:scrollToTop];
     }
 }
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)sender {    
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     CGFloat fractionalPage;
-    if(self.direction==XHSlidingDirectionHorizontal){
+    if(self.direction == XHSlidingDirectionHorizontal){
         fractionalPage  =  _mainScrollView.contentOffset.x /  _mainScrollView.frame.size.width;
-    }else{
+    } else {
         fractionalPage  =  _mainScrollView.contentOffset.y /  _mainScrollView.frame.size.height;
     }
     
     [self _computePageIndexWithPageIndex:fractionalPage];
     
-    if(![self _pageIsPreparedAt:_pageIndex])
+    if(![self _pageIsPreparedAt:_pageIndex]) {
         [self _preparePageAtIndex:_pageIndex];
-    if(![self _pageIsPreparedAt:_futureIndex])
-        [self _preparePageAtIndex:_futureIndex];
+    }
     
+    if(![self _pageIsPreparedAt:_futureIndex]) {
+        [self _preparePageAtIndex:_futureIndex];
+    }
+    
+    [self.xh_segmentControl goToPage:_pageIndex];
 }
-
 
 - (void)_computePageIndexWithPageIndex:(CGFloat)page{
     
@@ -474,8 +523,6 @@
     }
     
 }
-
-
 
 #pragma mark -
 #pragma mark Debug facility
