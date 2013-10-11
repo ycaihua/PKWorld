@@ -236,10 +236,6 @@
         itemFrame.origin.x = 0;
     }
     
-    if ((itemFrame.origin.x + itemFrame.size.width) > backScrollView.contentSize.width) {
-        itemFrame.origin.x = (backScrollView.contentSize.width - backScrollView.frame.size.width);
-    }
-    
     [self.backScrollView scrollRectToVisible:itemFrame animated:YES];
     
     //change grip

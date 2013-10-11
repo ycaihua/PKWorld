@@ -8,7 +8,7 @@
 
 #define KEY_WINDOW  [[UIApplication sharedApplication]keyWindow]
 
-#import "AnimationNavigationController.h"
+#import "XHNavigationController.h"
 #import <QuartzCore/QuartzCore.h>
 
 #pragma mark - DirectionPanGestureRecognizer
@@ -79,7 +79,7 @@ typedef enum
 
 @end
 
-@interface AnimationNavigationController () <UIGestureRecognizerDelegate>
+@interface XHNavigationController () <UIGestureRecognizerDelegate>
 {
     CGPoint startTouch;
     CGPoint startTouchLocation;
@@ -97,7 +97,7 @@ typedef enum
 
 @end
 
-@implementation AnimationNavigationController
+@implementation XHNavigationController
 {
     NSMutableArray *_animationQueue;
     BOOL _userInteractionStore;
@@ -307,7 +307,8 @@ typedef enum
     if (self) {
         // Custom initialization
         
-        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];        
+        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
+        self.canDragBack = YES;
     }
     return self;
 }

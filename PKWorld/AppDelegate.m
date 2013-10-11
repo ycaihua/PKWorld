@@ -20,15 +20,13 @@
     
     LeftSideDrawerViewController *leftSideDrawerViewController = [[LeftSideDrawerViewController alloc] init];
     
-    
     MainCenterModel *mainCenterItemModel = [[MainCenterModel alloc] init];
     mainCenterItemModel.mainTableViewControllerClassName = @"PKWorldTableViewController";
     mainCenterItemModel.mainTitle = @"PK世界";
     
     MainCenterViewController *mainCenterViewController = [[MainCenterViewController alloc] initWithMainCenterItemModel:mainCenterItemModel];
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainCenterViewController];
-    
+    UINavigationController *navigationController = [[NSClassFromString((isIOS7 ? @"UINavigationController" : @"XHNavigationController")) alloc] initWithRootViewController:mainCenterViewController];
     
     XHDrawerController *drawerController = [[XHDrawerController alloc] initWithLeftViewController:leftSideDrawerViewController mainViewController:navigationController];
     self.window.rootViewController = drawerController;

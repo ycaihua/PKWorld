@@ -285,10 +285,11 @@
                  atIndex:(NSUInteger)index{
     CGRect pageFrame = [self _adpativeReferenceBounds];
     if(self.direction == XHSlidingDirectionHorizontal) {
-        pageFrame.origin.y = (_IOS7ANDGREATER ? -AdptNavigationBarAndStatusBarHeight : 0);
+        pageFrame.origin.y = (_IOS7ANDGREATER ? -AdptNavigationBarAndStatusBarHeight : ItemBarHeight);
+        pageFrame.size.height -= (_IOS7ANDGREATER ? 0 : ItemBarHeight);
         CGFloat x=[self _adpativeReferenceBounds].size.width * (CGFloat)index;
         pageFrame.origin.x = x;
-    } else{
+    } else {
         pageFrame.origin.x = 0;
         CGFloat y = [self _adpativeReferenceBounds].size.height * (CGFloat)index;
         pageFrame.origin.y = y;

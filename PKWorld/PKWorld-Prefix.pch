@@ -27,4 +27,7 @@
 // 添加常用头文件
     #import "HeaderDefault.h"
 
+// 添加手势控制返回的NavigationController的类文件
+    #import "XHNavigationController.h"
+
 #endif

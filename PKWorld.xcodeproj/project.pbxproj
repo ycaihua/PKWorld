@@ -111,10 +111,10 @@
 		ABDB46B218035AA40071E14F /* XHDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDB46B018035AA40071E14F /* XHDrawerController.m */; };
 		ABEDFB6318083D9F001AEBAB /* PKWorldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFB6218083D9F001AEBAB /* PKWorldDetailViewController.m */; };
 		ABEDFB6418083D9F001AEBAB /* PKWorldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFB6218083D9F001AEBAB /* PKWorldDetailViewController.m */; };
-		ABF8B2D718084850007A3BA2 /* AnimationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D418084850007A3BA2 /* AnimationNavigationController.m */; };
-		ABF8B2D818084850007A3BA2 /* AnimationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D418084850007A3BA2 /* AnimationNavigationController.m */; };
-		ABF8B2D918084850007A3BA2 /* UIViewController+AnimationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D618084850007A3BA2 /* UIViewController+AnimationNavigationController.m */; };
-		ABF8B2DA18084850007A3BA2 /* UIViewController+AnimationNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D618084850007A3BA2 /* UIViewController+AnimationNavigationController.m */; };
+		ABF8B2D718084850007A3BA2 /* XHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D418084850007A3BA2 /* XHNavigationController.m */; };
+		ABF8B2D818084850007A3BA2 /* XHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2D418084850007A3BA2 /* XHNavigationController.m */; };
+		ABF8B2E918084A54007A3BA2 /* UIViewController+XHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2E818084A54007A3BA2 /* UIViewController+XHNavigationController.m */; };
+		ABF8B2EA18084A54007A3BA2 /* UIViewController+XHNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF8B2E818084A54007A3BA2 /* UIViewController+XHNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,10 +212,10 @@
 		ABDB46B018035AA40071E14F /* XHDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHDrawerController.m; sourceTree = "<group>"; };
 		ABEDFB6118083D9F001AEBAB /* PKWorldDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKWorldDetailViewController.h; sourceTree = "<group>"; };
 		ABEDFB6218083D9F001AEBAB /* PKWorldDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKWorldDetailViewController.m; sourceTree = "<group>"; };
-		ABF8B2D318084850007A3BA2 /* AnimationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationNavigationController.h; sourceTree = "<group>"; };
-		ABF8B2D418084850007A3BA2 /* AnimationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationNavigationController.m; sourceTree = "<group>"; };
-		ABF8B2D518084850007A3BA2 /* UIViewController+AnimationNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AnimationNavigationController.h"; sourceTree = "<group>"; };
-		ABF8B2D618084850007A3BA2 /* UIViewController+AnimationNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AnimationNavigationController.m"; sourceTree = "<group>"; };
+		ABF8B2D318084850007A3BA2 /* XHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHNavigationController.h; sourceTree = "<group>"; };
+		ABF8B2D418084850007A3BA2 /* XHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHNavigationController.m; sourceTree = "<group>"; };
+		ABF8B2E718084A54007A3BA2 /* UIViewController+XHNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XHNavigationController.h"; sourceTree = "<group>"; };
+		ABF8B2E818084A54007A3BA2 /* UIViewController+XHNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XHNavigationController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,10 +594,10 @@
 		ABF8B2D218084850007A3BA2 /* XHNavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				ABF8B2D318084850007A3BA2 /* AnimationNavigationController.h */,
-				ABF8B2D418084850007A3BA2 /* AnimationNavigationController.m */,
-				ABF8B2D518084850007A3BA2 /* UIViewController+AnimationNavigationController.h */,
-				ABF8B2D618084850007A3BA2 /* UIViewController+AnimationNavigationController.m */,
+				ABF8B2D318084850007A3BA2 /* XHNavigationController.h */,
+				ABF8B2D418084850007A3BA2 /* XHNavigationController.m */,
+				ABF8B2E718084A54007A3BA2 /* UIViewController+XHNavigationController.h */,
+				ABF8B2E818084A54007A3BA2 /* UIViewController+XHNavigationController.m */,
 			);
 			path = XHNavigationController;
 			sourceTree = "<group>";
@@ -744,7 +744,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDB46B118035AA40071E14F /* XHDrawerController.m in Sources */,
-				ABF8B2D718084850007A3BA2 /* AnimationNavigationController.m in Sources */,
+				ABF8B2D718084850007A3BA2 /* XHNavigationController.m in Sources */,
 				AB68D93D18070C6D007BF89B /* XHSegmentControl.m in Sources */,
 				ABDB468C18035A370071E14F /* TheConnotationOfJokesTableViewController.m in Sources */,
 				ABDB468A18035A370071E14F /* HealthTableViewController.m in Sources */,
@@ -755,6 +755,7 @@
 				ABDB469C18035A370071E14F /* TakePhotoViewController.m in Sources */,
 				ABDB469818035A370071E14F /* SecretTableViewController.m in Sources */,
 				ABDB4639180359E30071E14F /* AppDelegate.m in Sources */,
+				ABF8B2E918084A54007A3BA2 /* UIViewController+XHNavigationController.m in Sources */,
 				ABDB468818035A370071E14F /* BaseViewController.m in Sources */,
 				AB68D91E1806B07B007BF89B /* MainCenterModel.m in Sources */,
 				ABEDFB6318083D9F001AEBAB /* PKWorldDetailViewController.m in Sources */,
@@ -764,7 +765,6 @@
 				ABDB469218035A370071E14F /* NewsTableViewController.m in Sources */,
 				AB68D94118070C7C007BF89B /* XHSegmentItem.m in Sources */,
 				ABDB468E18035A370071E14F /* LeftSideDrawerViewController.m in Sources */,
-				ABF8B2D918084850007A3BA2 /* UIViewController+AnimationNavigationController.m in Sources */,
 				AB68D9311806FE9E007BF89B /* NewsCell.m in Sources */,
 				ABDB468618035A370071E14F /* UIView-Transform.m in Sources */,
 				ABDB46A018035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
@@ -782,7 +782,7 @@
 				ABDB469718035A370071E14F /* PKWorldTableViewController.m in Sources */,
 				AB68D91F1806B07B007BF89B /* MainCenterModel.m in Sources */,
 				ABA499CC1805CEF9004F743D /* UIViewController+ConfigureWithModel.m in Sources */,
-				ABF8B2D818084850007A3BA2 /* AnimationNavigationController.m in Sources */,
+				ABF8B2D818084850007A3BA2 /* XHNavigationController.m in Sources */,
 				AB68D93E18070C6D007BF89B /* XHSegmentControl.m in Sources */,
 				ABDB46A118035A370071E14F /* PKWorld.xcdatamodeld in Sources */,
 				ABDB4652180359E40071E14F /* PKWorldTests.m in Sources */,
@@ -790,9 +790,9 @@
 				ABDB469918035A370071E14F /* SecretTableViewController.m in Sources */,
 				ABDB469D18035A370071E14F /* TakePhotoViewController.m in Sources */,
 				ABDB468918035A370071E14F /* BaseViewController.m in Sources */,
+				ABF8B2EA18084A54007A3BA2 /* UIViewController+XHNavigationController.m in Sources */,
 				ABDB46B218035AA40071E14F /* XHDrawerController.m in Sources */,
 				ABDB469518035A370071E14F /* PhotosTableViewController.m in Sources */,
-				ABF8B2DA18084850007A3BA2 /* UIViewController+AnimationNavigationController.m in Sources */,
 				ABDB468718035A370071E14F /* UIView-Transform.m in Sources */,
 				ABDB468B18035A370071E14F /* HealthTableViewController.m in Sources */,
 				ABDB469118035A370071E14F /* MainCenterViewController.m in Sources */,

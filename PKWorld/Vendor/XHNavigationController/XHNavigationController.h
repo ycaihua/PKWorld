@@ -10,7 +10,7 @@
 #import <UIKit/UIGestureRecognizerSubclass.h>
 
 
-@interface AnimationNavigationController : UINavigationController
+@interface XHNavigationController : UINavigationController
 
 @property (nonatomic,retain) NSMutableArray *screenShotsList;
 
